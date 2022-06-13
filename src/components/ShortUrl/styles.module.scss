@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 70%;
+
+  .title {
+    color: lightgray;
+    margin-right: 2%;
+  }
+
+  .shortUrl {
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    background: aliceblue;
+    padding: 2%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
+    .result {
+      font-size: 1.4em;
+      color: darkgoldenrod;
+      text-decoration: none;
+
+      &:hover {
+        color: lightblue;
+      }
+    }
+
+    .copyBtn {
+      border: none;
+      background: transparent;
+      color: forestgreen;
+    }
+  }
+}

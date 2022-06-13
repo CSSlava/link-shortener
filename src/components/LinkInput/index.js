@@ -15,7 +15,7 @@ const LinkInput = ({ value, setValue, isError }) => {
         placeholder="Past your link"
         value={value}
         onChange={setValue}
-        className={isError && styles.withError}
+        className={isError ? styles.withError : ''}
       />
       {isError && <p className={styles.errorMessage}>URL is not valid!</p>}
     </div>
