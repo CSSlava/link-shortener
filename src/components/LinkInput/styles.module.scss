@@ -1,0 +1,45 @@
+$error-color: crimson;
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 2em;
+  position: relative;
+  margin-bottom: 3%;
+
+  .title {
+    margin-bottom: 5%;
+    color: aliceblue;
+  }
+
+  input {
+    padding: 3% 4%;
+    width: 40%;
+    border-radius: 10px;
+    border: none;
+    font-size: 2rem;
+    color: lightblue;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: lightgray;
+    }
+  }
+
+  .withError {
+    border: 1px solid $error-color;
+  }
+
+  .errorMessage {
+    position: absolute;
+    bottom: 0;
+    font-size: 1.2em;
+    color: $error-color;
+  }
+
+}

@@ -1,0 +1,11 @@
+.btn {
+  background: green;
+  padding: 1% 5%;
+  border: none;
+  border-radius: 7px;
+
+  &:hover {
+    background: peru;
+    color: lightgray;
+  }
+}
