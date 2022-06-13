@@ -22,7 +22,7 @@ const Shortener = () => {
     setInputValue(e.target.value);
   };
 
-  const shortLink = async () => {
+  const shortLink = async (link) => {
     await fetch('https://api-ssl.bitly.com/v4/shorten', {
       headers: {
         'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ const Shortener = () => {
       method: 'POST',
       body: JSON.stringify({
         "domain": "bit.ly",
-        "long_url": "https://google.com/"
+        "long_url": link
       })
     }).then(res => res.json())
       .then(data => {
@@ -42,7 +42,7 @@ const Shortener = () => {
 
   const generateShortLink = async () => {
     if (isValidURL(inputValue)) {
-      await shortLink();
+      await shortLink(inputValue);
     } else {
       setInputError(true);
     }
