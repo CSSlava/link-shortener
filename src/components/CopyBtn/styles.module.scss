@@ -1,0 +1,18 @@
+.wrapper {
+  position: relative;
+
+  .message {
+    position: absolute;
+    top: -120%;
+    left: 50%;
+    background: lightgray;
+    border-radius: 5px;
+    padding: 3% 5%;
+  }
+
+  .copyBtn {
+    border: none;
+    background: transparent;
+    color: forestgreen;
+  }
+}
