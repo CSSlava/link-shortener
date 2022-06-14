@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Screenshots of your app and/or a link to your live demo
 
 ## Installation
-
+For installation you need to clone repository to your local machine and run `npm i` from project directory
 
 ## Available Scripts
 
