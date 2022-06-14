@@ -1,11 +1,15 @@
 // core
 import React from 'react';
 
+// components
+import CopyBtn from '../CopyBtn';
+
 // styles
 import styles from './styles.module.scss';
 
 
 const ShortUrl = ({ value }) => {
+
   return (
     <div className={styles.wrapper}>
       <span className={styles.title}>Short link: </span>
@@ -15,10 +19,11 @@ const ShortUrl = ({ value }) => {
           className={styles.result}
           target="_blank"
           rel="noopener noreferrer"
+          id="short_url"
         >
           {value}
         </a>
-        <button className={styles.copyBtn}>Copy</button>
+        <CopyBtn value={value} />
       </div>
     </div>
   )
