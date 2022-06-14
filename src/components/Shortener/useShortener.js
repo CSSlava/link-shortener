@@ -11,8 +11,6 @@ const useShortener = () => {
   const [inputError, setInputError] = useState(false);
   const [shortUrl, setShortUrl] = useState('');
 
-  const AUTH_TOKEN = 'b81f8530982b146a28a74a85f1a87122210ca8f3';
-
   const onChangeLinkInput = e => {
     setInputValue(e.target.value);
   };
@@ -21,7 +19,7 @@ const useShortener = () => {
     await fetch('https://api-ssl.bitly.com/v4/shorten', {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${AUTH_TOKEN}`
+        'Authorization': `Bearer ${process.env.REACT_APP_BITLY_TOKEN}`,
       },
       method: 'POST',
       body: JSON.stringify({
